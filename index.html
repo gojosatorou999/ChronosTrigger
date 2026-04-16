@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChronosTrigger | Intelligent Reminder System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header>
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <h1>ChronosTrigger</h1>
+            </div>
+            <p class="subtitle">Precision scheduling & trigger simulation</p>
+            <div id="live-clock" class="digital-clock">00:00:00</div>
+        </header>
+
+        <section class="controls glass">
+            <div class="input-group">
+                <input type="text" id="reminder-text" placeholder="What should I remind you?" autocomplete="off">
+                <input type="datetime-local" id="reminder-time">
+                <button id="add-btn" class="primary-btn">Schedule Trigger</button>
+            </div>
+        </section>
+
+        <section class="monitor glass">
+            <div class="section-header">
+                <h2>Active Triggers</h2>
+                <div class="status-pulse">
+                    <span class="pulse-dot"></span>
+                    Monitoring Live
+                </div>
+            </div>
+            <div id="reminders-list" class="reminders-list">
+                <!-- Reminders will appear here -->
+                <div class="empty-state">
+                    <p>No active triggers. Time is flowing...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Trigger Overlay (Notification) -->
+    <div id="trigger-overlay" class="trigger-overlay hidden">
+        <div class="notification-card glass">
+            <div class="notif-icon">🔔</div>
+            <h3>Trigger Activated!</h3>
+            <p id="notif-message"></p>
+            <button id="dismiss-btn" class="secondary-btn">Acknowledge</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
