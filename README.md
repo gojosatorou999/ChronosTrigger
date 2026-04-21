@@ -2,7 +2,7 @@
 
 **ChronosTrigger** is a high-performance, aesthetically driven reminder system designed to simulate real-time trigger events. Built with modern web technologies, it features a glassmorphism UI and a precision background polling engine.
 
-## 🚀 Key Features
+## 🚀 Key Features:
 
 - **Real-time Monitoring**: A 1Hz background loop simulates a hardware trigger check, ensuring sub-second precision for scheduled events.
 - **Glassmorphism UI**: A premium, futuristic interface using HSL-tailored color palettes and dynamic background blobs.
